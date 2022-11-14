@@ -1,0 +1,25 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<form action="">
+    <div class="row">
+        <div class="col-md-3">
+            <label for="">Tabla asociada</label>
+            <input type="text" name="table" [(ngModel)]="form.table" >
+        </div>
+        <div class="col-md-3">
+            <label for="">Nombre de Formulario</label>
+            <input type="text" name="nameForm" [(ngModel)]="form.title">
+        </div>
+
+    </div>
+
+    <form-builder [form]="form"> </form-builder>
+    <button (click)="saveForm()">Guardar Formulario</button>
+
+    <button routerLink="/form/list">Ver Todos los Formularios</button>
+</form>  
+
+
+<!-- <pre>
+    {{form | json}}
+</pre> -->

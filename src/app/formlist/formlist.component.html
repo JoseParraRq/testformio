@@ -1,0 +1,20 @@
+<h1 style="background-color:teal ;">Lista de formularios</h1>
+<table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name Form</th>
+        <th scope="col">Table</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of form" routerLink="/form/detail/{{item.id}}">
+            <td>{{item.id}}</td>
+            <td>{{item.name_form}}</td>
+            <td>{{item.table_asociated}}</td>
+        </tr>
+    </tbody>
+      <tr>
+  </table>
+  <!-- (click)="getFormById(item.id)" -->
+  

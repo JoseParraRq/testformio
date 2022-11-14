@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="align-items-center" content>
+      <a class="navbar-brand" href="#"><img style="height: 2em;" src="https://mobilsoft.co/assets/img/logooo.png" /></a>
+      <ul class="nav navbar-nav mr-auto">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/"><i class="fa fa-home"></i></a>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="auth/login" (click)="login()">Login</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="auth/register" (click)="register()"><span class="glyphicon glyphicon-off"></span> Register</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link"  routerLink="/user/list"><span class="glyphicon glyphicon-off"></span> User List</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link"  (click)="createForm()"><span class="glyphicon glyphicon-off"></span> Create Form</a>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
+
+

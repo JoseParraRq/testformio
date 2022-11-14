@@ -1,0 +1,23 @@
+<head><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous"></head>
+
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{userId.firstname}} {{userId.surname}}</h5>
+      <p class="card-text">Datos del usuario:</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Email: {{userId.email}}</li>
+      <li class="list-group-item">City: {{userId.city}}</li>
+      <li class="list-group-item">Address: {{userId.address}}</li>
+    </ul>
+    <div class="card-body">
+      <button routerLink="/user/update/{{userId.id}}">Editar Usuario</button>
+    <button routerLink="/user/list">Ver Todos Los Usuarios</button>
+
+    </div>
+  </div>
+
+
