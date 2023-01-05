@@ -30,9 +30,9 @@ export class ProductServiceService {
     return this.serviceProduct.post(`${this.server}/getProductById`,body);
   }
 
-  // updateUser(obj:any){
+  updateProduct(obj:any){
     
-  //   return this.serviceUser.put(`${this.server}/updateUser`,obj);
-  // }
+    return this.serviceProduct.put(`${this.server}/updateProduct`,obj);
+  }
 
 }

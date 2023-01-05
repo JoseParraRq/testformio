@@ -278,7 +278,7 @@ export class BuilderComponent implements OnInit {
     this.formService.createForm(this.form).subscribe(
       res=>{
       console.log(res);
-      this.router.navigate(['builder'])
+      this.router.navigate(['form/list'])
     },
     err=>console.error(err)    
     )

@@ -29,6 +29,12 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { EditFormComponent } from './edit-form/edit-form.component';
+import { EditProductComponent } from './edit-product/edit-product.component';
+import { MasterDetailFormComponent } from './master-detail-form/master-detail-form.component';
+import { ConTercerosComponent } from './con-terceros/con-terceros.component';
+import { ConTercerosListComponent } from './con-terceros-list/con-terceros-list.component';
+import { TercerosDetailComponent } from './terceros-detail/terceros-detail.component';
+import { UpdateTercerosComponent } from './update-terceros/update-terceros.component';
 @NgModule({
   declarations: [
     AppComponent,  
@@ -44,6 +50,13 @@ import { EditFormComponent } from './edit-form/edit-form.component';
     EditUserComponent,
     ProductDetailComponent,
     EditFormComponent,
+    EditProductComponent,
+    MasterDetailFormComponent,
+    MasterDetailFormComponent,
+    ConTercerosComponent,
+    ConTercerosListComponent,
+    TercerosDetailComponent,
+    UpdateTercerosComponent,
    
   ],
   imports: [

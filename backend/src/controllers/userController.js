@@ -57,6 +57,37 @@ class UserController{
         return res.json({userUpdate});
     }
   
+    async userLogin(req,res){
+try {
+    var login = await new UserLogic().userLogin(req.body);
+    console.log("here the login",login);
+} catch (error) {
+    console.log("here the error in login",login);
+}
+    return res.json({login});
+    }
+
+    async getUserByEmail(req,res){
+        try {
+            var data = await new UserLogic().getUserByEmail(req.body);
+        } catch (error) {
+            console.log("here the error in get User By Email",error);
+        }
+        return res.json({data:"request Successful"});;
+    }
+
+    async getAllTerceros(req,res){
+        try {
+            var users = await new UserLogic().getAllTercerosLogic();
+            console.log("here the users in the controller",users);
+        } catch (error) {
+            console.log("here the error in the get all users",error);
+        }
+        return res.json({users});//"successful request"
+        // await bd.raw('insert into user (firstname,surname,email,password,cities_id) values($0,$1,$2,$3,$4);',[user.firstname,user.surname,user.email,user.password,user.cities_id]);
+        // knex('user').insert({email: user.email,})
+        //
+    }
 }
 
 

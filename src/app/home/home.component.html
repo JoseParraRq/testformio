@@ -8,6 +8,7 @@ integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLAS
         <th scope="col">Id</th>
         <th scope="col">Product Name</th>
         <th scope="col">Category</th>
+        <th scope="col">Quantity</th>
         <th scope="col">Created By</th>
 
       </tr>
@@ -17,6 +18,7 @@ integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLAS
             <td>{{item.id}}</td>
             <td>{{item.product_name}}</td>
             <td>{{item.name_category}}</td>
+            <td>{{item.quantity}}</td>
             <td>{{item.email}}</td>
 
         </tr>
@@ -24,6 +26,12 @@ integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLAS
       <tr>
   </table>
 <div>
-    <button routerLink="/product/create">Create Product</button>
-</div>
+  <!-- <button routerLink="/product/create">Create Product</button>
+    <button routerLink="/masterDetail/user/createUser">MasterDetailTest</button> -->
+    <button routerLink="/terceros/create">Create Terceros</button>
+    <button routerLink="/terceros/list">list Terceros</button>
 
+
+  </div>
+
+<div>{{fechaTest}}</div>

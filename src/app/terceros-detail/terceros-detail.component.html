@@ -1,0 +1,43 @@
+<head><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous"></head>
+
+<div class="card" style="width: 25rem; color:darkcyan;">
+    <div class="card-body" >
+      <h5 class="card-title">Datos del Tercero Nombre de Tercero: {{terceroFron.nombre_tercero}}</h5>
+    </div>
+    <ul class="list-group list-group-flush" style="background-color: blue;">
+        
+      <li class="list-group-item">Tipo Tercero: {{terceroFron.Tipo_tercero}}</li>
+      <li class="list-group-item">Tipo Documento: {{terceroFron.tipo_documento}}</li>
+      <li class="list-group-item">Digito: {{terceroFron.digito}}</li>
+      <li class="list-group-item">Primer Nombre: {{terceroFron.primer_nombre}}</li>
+      <li class="list-group-item">Segundo Nombre: {{terceroFron.segundo_nombre}}</li>
+      <li class="list-group-item">Primer Apellido: {{terceroFron.primer_apellido}}</li>
+      <li class="list-group-item">Segundo Apellido: {{terceroFron.segundo_apellido}}</li>
+      <li class="list-group-item">Tipo Regimen: {{terceroFron.tipo_regimen}}</li>
+      <li class="list-group-item">Primer Municipio: {{terceroFron.municipio}}</li>
+      <li class="list-group-item">Actividad: {{terceroFron.actividad}}</li>
+      <li class="list-group-item">Id Lista de Precio: {{terceroFron.id_lista_precio}}</li>
+      <li class="list-group-item">Forma de Pago: {{terceroFron.forma_pago}}</li>
+      <li class="list-group-item">Direccion: {{terceroFron.direccion}}</li>
+      <li class="list-group-item">Telefono: {{terceroFron.telefono}}</li>
+      <li class="list-group-item">Celular: {{terceroFron.celular}}</li>
+      <li class="list-group-item">Email: {{terceroFron.email}}</li>
+      <li class="list-group-item">Cupo Credito: {{terceroFron.cupo_credito}}</li>
+      <li class="list-group-item">Plazo: {{terceroFron.plazo}}</li>
+      <li class="list-group-item">Estado: {{terceroFron.estado}}</li>
+      <li class="list-group-item">Id Cuenta de Retencion: {{terceroFron.id_cuenta_retencion}}</li>
+      <li class="list-group-item">Retencion Porcentaje: {{terceroFron.retencion_porcentaje}}</li>
+      <li class="list-group-item">Id Cuenta Reteica: {{terceroFron.id_cuenta_reteica}}</li>
+      <li class="list-group-item">Base Retencion: {{terceroFron.base_retencion}}</li>
+
+    </ul>
+    <div class="card-body">
+      <button routerLink="/terceros/update/{{terceroFron.id}}"  >Actualizar Informacion De Tercero</button>
+      <button (click)="delete()">Borrar Este Tercero</button>
+
+    <button routerLink="/terceros/list">See all Terceros</button>
+    <!-- <app-update-terceros [childMessage]="terceroFron"></app-update-terceros> -->
+    </div>
+  </div>

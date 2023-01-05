@@ -2,13 +2,13 @@
 
 
 const knex = require('knex')({
-    client:'mysql',
+    client:'mssql',
     connection:{
-        host : 'localhost',
-        port : 3306,
-        user : 'root',
-        password : '1234',
-        database : 'test'
+        host : 'mobilserver.ddns.net',
+        port : 1433,
+        user : 'sa',
+        password : 'D3v3l0p3r',
+        database : 'capacitacion'
     },
     pool: { min: 2, max: 20 }
 });

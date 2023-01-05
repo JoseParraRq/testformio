@@ -3,7 +3,6 @@
     crossorigin="anonymous"></head>
 
 <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Datos del Producto: {{product.product_name}}</h5>
     </div>
@@ -14,7 +13,7 @@
 
     </ul>
     <div class="card-body">
-      <button routerLink="/product/update/">Update Product</button>
+      <button routerLink="/product/update/{{product.id}}">Update Product</button>
     <button routerLink="/">See all the Products</button>
 
     </div>

@@ -9,6 +9,7 @@ import { ProductServiceService } from '../services/product-service.service';
 })
 export class HomeComponent implements OnInit {
   products:any[]= [];
+  fechaTest:any;
   constructor(
     public productService:ProductServiceService,
     public router:Router
@@ -36,7 +37,20 @@ var element = map[i];
 console.log("here the element into the array 1",element.products);
 this.products = element.products;   
       })
-    }
+    const fecha = new Date();
+    const dateString = fecha.toLocaleString();
+const enDateString = fecha.toLocaleString("en-US");
+const monthNameLong = fecha.toLocaleString("en-US", { month: "long" });
+const monthNameShort = fecha.toLocaleString("en-US", { month: "short" });
+console.log("here the fechaaaa",fecha);
+
+console.log(fecha);
+console.log(dateString);
+console.log(enDateString);
+console.log(monthNameLong);
+console.log(monthNameShort);
+this.fechaTest = fecha
+}
   }
 
 

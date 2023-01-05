@@ -3,6 +3,7 @@ const { UserController } = require('../controllers/userController');
 const {FormBuilderController} = require('./../controllers/formBuilderController');
 const service = require('../models/user');
 const { ProductController } = require('../controllers/productController');
+const { TercerosController } = require('../controllers/tercerosController');
 const router=Router();
 
 
@@ -19,30 +20,55 @@ router.get("/",(req,res)=>{
 
 //router.get("/all",list);
 
+// angular desarrollo==============>>>>>>>>
+router.get("/getTipoTerceros",new TercerosController().getTipoTerceros);
+// router.get("/getActividadesCiiu",new TercerosController().getActividadesCiiu);
+router.get("/getTipoDocumento",new TercerosController().getTipoDocumento);
+router.get("/getTipoRegimen",new TercerosController().getTipoRegimen);//http://localhost:3000/getTipoRegimen
+router.get("/getMunicipios",new TercerosController().getMunicipios);
+router.get("/getDepartamentos",new TercerosController().getDepartamentos);
+// router.get("/getTipoFormaDePago",new TercerosController().getTipoFormaDePago);
 
-router.post("/createForm",new FormBuilderController().createForm);
+router.get("/getAllTerceros",new TercerosController().getAllTerceros);
 
-router.get("/getAllForms",new FormBuilderController().getAllForms);
+// router.get("/getAllTercerosForList",new TercerosController().getAllTercerosForList);
+// router.post("/getOneTercerosForDetail",new TercerosController().getOneTercerosForLogic);
+// router.post("/getOneTerceros",new TercerosController().getOneTerceros);
+// router.put("/updateTerceros",new TercerosController().updateTerceros)
+router.post("/createTerceros",new TercerosController().createTerceros);
 
-router.post("/getFormById",new FormBuilderController().getFormById);
+// router.post("/createForm",new FormBuilderController().createForm);
+// router.post("/deleteTerceros", new TercerosController().deleteTerceros)
+// // fin desarrollo
 
-router.post("/getFormByName",new FormBuilderController().getFormByName);
+// // angular test form =========================>>>>>>>>>>>>>>>>>>>>>>
+// router.post("/login",new UserController().userLogin);
 
-router.put("/updateForm",new FormBuilderController().updateForm);
+// router.post("/createForm",new FormBuilderController().createForm);
 
-router.post("/createUser",new UserController().createUser);
+// router.get("/getAllForms",new FormBuilderController().getAllForms);
 
-router.get("/getAllUsers",new UserController().getAllUsers);
+// router.post("/getFormById",new FormBuilderController().getFormById);
 
-router.post("/getUserById",new UserController().getUserById);
+// router.post("/getFormByName",new FormBuilderController().getFormByName);
 
-router.put("/updateUser",new UserController().updateUser);
+// router.put("/updateForm",new FormBuilderController().updateForm);
 
-router.post("/createProduct",new ProductController().createProduct);
+// router.post("/createUser",new UserController().createUser);
 
-router.get("/getAllProducts",new ProductController().getAllProducts);
+// router.get("/getAllUsers",new UserController().getAllUsers);
 
-router.post("/getProductById",new ProductController().getProductById);
+// router.post("/getUserById",new UserController().getUserById);
+
+// router.put("/updateUser",new UserController().updateUser);
+
+// router.post("/createProduct",new ProductController().createProduct);
+
+// router.get("/getAllProducts",new ProductController().getAllProducts);
+
+// router.post("/getProductById",new ProductController().getProductById);
+
+// router.put("/updateProduct",new ProductController().updateProduct);
 
 
 module.exports = router;

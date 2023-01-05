@@ -34,5 +34,8 @@ export class UserServiceService {
     return this.serviceUser.put(`${this.server}/updateUser`,obj);
   }
 
+  login(login:any){
+    return this.serviceUser.post(`${this.server}/login`,login)
+  }
 
 }

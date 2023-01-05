@@ -64,6 +64,119 @@ async updateUser(user){
    }
    return userUpdate;   
 }
+
+async userLogin(login){
+try {
+  console.log("here the login in logic",login);
+     
+  var userLogin = await bd.raw('select id,email,password from user where email=?;',[login.email]);
+     console.log("here the userLogin",userLogin[0][0]);
+     if(userLogin[0][0]===undefined || userLogin[0][0]===null){
+      throw Error('bad request email')
+    }
+
+    console.log(typeof(userLogin));
+    return userLogin[0][0];
+} catch (error) { 
+  console.log("here the error in login logic",error);
+  throw Error(error);
+}
+}
+
+async getAllTercerosLogic(){
+  try {
+    const array = [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      'listar'
+  ];
+
+    var users = await bd.raw(`call Sp_con_terceros(${array.map((e) => { return "?"; })})`,array);
+
+    // var forms = await bd.select('id, name_form, table_asociated ').table('form');
+        //  console.log("her ethe result in response",forms);
+        console.log("here the forms in back query",users[0].users);
+
+  } catch (error) {
+    console.log(error);
+  }
+  return users[0][0]; 
+}
+
+async InsertTercerosLogic(req,res){
+  try {
+    // const insert = req.array
+    const array = [
+      req.body.id,
+      req.body.id_,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      'listar'
+  ];
+
+    var users = await bd.raw(`call Sp_con_terceros(${array.map((e) => { return "?"; })})`,);
+
+    // var forms = await bd.select('id, name_form, table_asociated ').table('form');
+        //  console.log("her ethe result in response",forms);
+        console.log("here the forms in back query",users[0].users);
+
+  } catch (error) {
+    console.log(error);
+  }
+  return users[0][0]; 
+}
+
+
 }
 
 module.exports={UserLogic}

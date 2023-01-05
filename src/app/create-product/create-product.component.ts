@@ -11,7 +11,8 @@ import { ProductServiceService } from '../services/product-service.service';
 })
 export class CreateProductComponent implements OnInit {
  public submit :SubmitEvent;
- createProductFormName='productRegistration'
+ tableTest='tableTest';
+//  createProductFormName='productRegistration'
 // product:Product;
   submissionData:any={data:{}};
 form:any={};
@@ -27,7 +28,9 @@ form:any={};
     ) { }
 
   ngOnInit(): void {
-    let formioProduct = this.formService.getFormByName(this.createProductFormName).subscribe((data)=>{
+    let formioProduct = this.formService.getFormByName(this.tableTest).subscribe((data)=>{
+
+    // let formioProduct = this.formService.getFormByName(this.createProductFormName).subscribe((data)=>{
         
         console.log("respuesta de la api FormById",data);
             let array:any[]=[];
@@ -60,6 +63,7 @@ form:any={};
         product_name:this.submissionData.data.product_name,
         product_category:this.submissionData.data.product_category,
         created_by:this.submissionData.data.created_by,
+        quantity:this.submissionData.data.quantity
     }
     console.log("here the product front before",product);
     
@@ -69,11 +73,6 @@ form:any={};
         this.router.navigate(['/'])
       },
       err=>console.error(err)    
-      )
-      // this.router.navigate(['/']);
-   
-    
-    // this.router.navigate(['/']);
- 
+      ) 
   }
 }
